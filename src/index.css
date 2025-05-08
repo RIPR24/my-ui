@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -90,4 +95,63 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.crd-wp {
+  border: 2px solid white;
+  border-radius: 20px;
+  color: var(--prm);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crd-wp:hover {
+  border: 2px solid var(--prm);
+  scale: 1.01;
+}
+.crd-prm {
+  background-color: var(--prmL);
+  border: 2px solid var(--prmL);
+  border-radius: 20px;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crd-prm:hover {
+  background-color: var(--prm);
+  border: 2px solid var(--prm);
+  scale: 1.01;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20;
+  max-width: 1200;
+  width: 95%;
+}
+.grid3 {
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20;
+  max-width: 1200;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 450px) {
+  .grid3,
+  .grid4 {
+    grid-template-columns: 1fr;
+  }
 }

@@ -3,6 +3,7 @@ import { useRef } from "react";
 
 type props = {
   str: string;
+  fs?: number;
 };
 
 const Headings = (props: props) => {
@@ -17,7 +18,7 @@ const Headings = (props: props) => {
         display: "flex",
         width: "100%",
         justifyContent: "center",
-        fontSize: "3rem",
+        fontSize: (props.fs || 3) + "rem",
       }}
       ref={ref}
     >
